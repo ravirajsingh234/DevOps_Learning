@@ -13,7 +13,7 @@ pipeline{
             steps{
                 sh '''
                     chmod +x deploy.sh
-                    ./deploy.sh --deploy --simulate-failure=true'
+                    ./deploy.sh --deploy --simulate-failure=true
                 '''
             }
         }
