@@ -3,11 +3,11 @@ pipeline{
 
     //environment{}
     stages{
-        stage('checkout') {
-            steps{
-                git 'https://github.com/ravirajsingh234/DevOps_Learning.git'
-            }
-        }
+        // stage('checkout') {
+        //     steps{
+        //         git 'https://github.com/ravirajsingh234/DevOps_Learning.git'
+        //     }
+        // }
 
         stage('Deploy with rollback') {
             steps{
