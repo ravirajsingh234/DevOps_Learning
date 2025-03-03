@@ -15,10 +15,11 @@ deploy(){
     
     if [ "$SIMULATE_FAILURE" = true ]; then
         log "Simulating deployment failure..."
-        exit 1
+        return 1
     fi
 
     log "Deployment completed successfully"
+    return 0
 }
 
 rollback(){
