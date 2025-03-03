@@ -7,7 +7,7 @@ ROLLBACK_FLAG=false
 SIMULATE_FAILURE=false
 
 log(){
-    echo "$(date + '%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1" | tee -a "$LOG_FILE"
 }
 
 deploy(){
