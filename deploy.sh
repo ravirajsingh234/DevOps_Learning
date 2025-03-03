@@ -32,7 +32,7 @@ for arg in "$@"
 do 
     case $arg in
         --deploy)
-        DEPLOY_FLAG = true
+        DEPLOY_FLAG=true
         shift
         ;;
         --rollback)
