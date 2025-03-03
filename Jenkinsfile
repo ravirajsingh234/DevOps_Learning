@@ -11,8 +11,10 @@ pipeline{
 
         stage('Deploy with rollback') {
             steps{
-                chmod +x deploy.sh
-                sh './deploy.sh --deploy --simulate-failure=true'
+                sh '''
+                    chmod +x deploy.sh
+                    ./deploy.sh --deploy --simulate-failure=true'
+                '''
             }
         }
     }   
