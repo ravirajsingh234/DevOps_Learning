@@ -2,10 +2,9 @@ pipeline {
 
 		agent any 
 		stages {
-			stage('server monitoring'){
+			stage('Backup and restore strategy'){
 				steps{
-					sh 'chmod +x monitoring.sh'
-					sh './monitoring.sh'
+					sh 'aws s3 sync ./data s3://backup-bucket/data'
 			}
 		}
 	}
