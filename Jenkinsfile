@@ -2,10 +2,9 @@ pipeline {
 
 		agent any 
 		stages {
-			stage('Backup and restore strategy'){
+			stage('Ansible deployment'){
 				steps{
-					sh 'chmod +x analyze-log.sh'
-					sh './analyze-log.sh'
+					sh 'ansible-playbook deploy.yaml'
 			}
 		}
 	}
